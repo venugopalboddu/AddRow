@@ -1,0 +1,35 @@
+<div class="row m-4"> 
+    <div class="col-md-6 offset-md-3"> 
+<div class="card m-4">
+<h5 class="card-header"><b style="color: rgb(112, 7, 7)">Angular Table row adding and removing</b></h5>
+<div class="card-body">
+        <button class="btn btn-success" (click)="addTable()">Add Row</button>&nbsp;
+        <button class="btn btn-danger" (click)="deleteRow(i)">Delete Row</button><br/><br/>
+    <table class="table table-bordered">
+        <tbody>
+                   <tr *ngFor="let i of row">
+                        <td><select class="browser-default custom-select">
+                                <option>select number</option>
+                                <option value="1">{{i.one}}</option>
+                                <option value="2">{{i.two}}</option>
+                                <option value="3">{{i.three}}</option>
+                              </select></td>
+                              <td><select class="browser-default custom-select" (change)="addAlert($event.target.value)">
+                                    <option>select number</option>
+                                    <option value="1">{{i.one}}</option>
+                                    <option value="2">{{i.two}}</option>
+                                    <option value="3">{{i.three}}</option>
+                                  </select></td>
+                                  <td><select class="browser-default custom-select">
+                                        <option>select number</option>
+                                        <option value="1">{{i.one}}</option>
+                                        <option value="2">{{i.two}}</option>
+                                        <option value="3">{{i.three}}</option>
+                                    </select></td>
+                    </tr>            
+        </tbody>
+      </table>  
+</div>
+</div>
+</div>
+</div>
